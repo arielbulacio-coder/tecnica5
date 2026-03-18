@@ -5,83 +5,92 @@ const ProjectionsPage = () => {
     return (
         <div className="drawing-container">
             <header className="drawing-header">
-                <h1>Sistemas de Proyección (ISO E / ISO A)</h1>
-                <p>El método de Monge: De 3D a 2D con precisión工业.</p>
+                <h1>Proyecciones Ortogonales (Método Monge)</h1>
+                <p>Cómo "desarmar" un objeto 3D para comunicarlo en un plano 2D.</p>
             </header>
 
             <div className="drawing-grid">
-                {/* NIVEL 1 - SISTEMA EUROPEO */}
-                <section className="drawing-card level-basic">
-                    <div className="level-badge">1er AÑO - BÁSICO</div>
-                    <h2>ISO E: El Estándar IRAM</h2>
-                    <p>En el Sistema Europeo, proyectamos sobre planos situados detrás del objeto. Imagina que el objeto está en una "Caja de Vidrio" y dibujas la sombra sobre las caras.</p>
-                    <div className="vistas-order">
-                        <div className="vista-box">ANTERIOR (FRENTE)</div>
-                        <div className="vistas-row">
-                            <div className="vista-box side">LATERAL IZQ.</div>
-                            <div className="vista-box side">LATERAL DER.</div>
+                {/* LA CAJA DE CRISTAL */}
+                <section className="drawing-card full-width visual-demo">
+                    <div className="demo-content">
+                        <div className="demo-canvas">
+                            <svg viewBox="0 0 100 100" width="300" className="glass-box-svg">
+                                {/* Cubo de cristal con transparencia */}
+                                <rect x="20" y="20" width="60" height="60" fill="rgba(0, 242, 255, 0.05)" stroke="var(--primary-color)" strokeWidth="0.3" strokeDasharray="1,1" />
+                                <path d="M20 20 L40 0 L100 0 L100 60 L80 80" fill="none" stroke="var(--primary-color)" strokeWidth="0.3" strokeDasharray="1,1" />
+                                <line x1="80" y1="20" x2="100" y2="0" stroke="var(--primary-color)" strokeWidth="0.3" strokeDasharray="1,1" />
+
+                                {/* Proyección en las caras */}
+                                <rect x="30" y="30" width="40" height="40" fill="none" stroke="var(--primary-color)" strokeWidth="1" />
+                                <text x="35" y="55" fill="#fff" fontSize="4" fontWeight="bold">FRENTE</text>
+
+                                <path d="M85 30 L85 70" fill="none" stroke="var(--secondary-color)" strokeWidth="1" />
+                                <text x="88" y="55" fill="var(--secondary-color)" fontSize="3" transform="rotate(90, 88, 55)">LATERAL</text>
+                            </svg>
                         </div>
-                        <div className="vista-box bottom">SUPERIOR (PLANTA)</div>
+                        <div className="demo-text">
+                            <h2>La "Caja de Cristal"</h2>
+                            <p className="highlight-text">Imagina el objeto dentro de una caja de vidrio transparente.</p>
+                            <p>Proyectar es mirar cada cara del objeto DESDE el infinito y dibujar su silueta sobre la pared de la caja.</p>
+                            <div className="info-box">
+                                <strong>ISO E:</strong> Normas IRAM. El objeto está ENTRE el observador y el plano.
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                {/* NIVEL 2 - SISTEMA AMERICANO Y CORTES */}
-                <section className="drawing-card level-advanced">
-                    <div className="level-badge">2do AÑO - AVANZADO</div>
-                    <h2>ISO A vs ISO E: La Diferencia</h2>
-                    <p>Mientras que en ISO E (Europa) el objeto está entre el observador y el plano; en ISO A (EEUU), el plano está ENTRE el observador y el objeto.</p>
-                    <div className="symbol-comparison">
-                        <div className="symbol-item">
-                            <span>ISO E (IRAM)</span>
-                            <svg viewBox="0 0 40 20" width="80"><path d="M5,5 L15,2 L15,18 L5,15 Z M25,10 A5,5 0 1,1 35,10 A5,5 0 1,1 25,10" fill="none" stroke="var(--primary-color)" strokeWidth="0.5" /></svg>
-                        </div>
-                        <div className="symbol-item">
-                            <span>ISO A (ANSI)</span>
-                            <svg viewBox="0 0 40 20" width="80"><path d="M25,5 L35,2 L35,18 L25,15 Z M5,10 A5,5 0 1,1 15,10 A5,5 0 1,1 5,10" fill="none" stroke="var(--secondary-color)" strokeWidth="0.5" /></svg>
-                        </div>
-                    </div>
-                </section>
-
+                {/* EL TRIUNVIRATO DE VISTAS */}
                 <section className="drawing-card full-width">
-                    <h2>IRAM 4507: Cortes y Secciones (Avanzado)</h2>
-                    <p>Cuando el interior de una pieza es complejo, realizamos un "corte" imaginario para ver el interior.</p>
-                    <div className="cortes-info">
-                        <ul>
-                            <li><strong>Línea de Corte:</strong> Se indica con línea Tipo F (Trazo y punto) con extremos gruesos.</li>
-                            <li><strong>Rayado de Sección:</strong> Línea continua fina (Tipo B) a 45°.</li>
-                            <li><strong>Sentido de Observación:</strong> Indicado por flechas en los extremos de la línea de corte.</li>
-                        </ul>
+                    <h2>Disposición de las 3 Vistas (ISO E)</h2>
+                    <div className="vistas-graph">
+                        <div className="vistas-main-grid">
+                            <div className="vista-label">SUPERIOR</div>
+                            <div className="vista-graph-item center">ALZADO (FRENTE)</div>
+                            <div className="vista-label side">LATERAL IZQUIERDA</div>
+                            <div className="vista-graph-item bottom">PLANTA (SUPERIOR)</div>
+                            <div className="vista-graph-item right">LATERAL DERECHA</div>
+                        </div>
+                        <div className="vistas-explanation">
+                            <p><strong>REGLA DE ORO:</strong> Las vistas deben estar ALINEADAS entre sí. No puedes dibujarlas en cualquier lugar de la hoja.</p>
+                            <ul>
+                                <li><strong>Correspondencia:</strong> El ancho del frente es el mismo que el de la planta.</li>
+                                <li><strong>Altura:</strong> La altura del frente es la misma que la del lateral.</li>
+                                <li><strong>Profundidad:</strong> La profundidad de la planta es la misma que el ancho del lateral.</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
                 <section className="drawing-card">
-                    <h2>Ejercicios 1° Año</h2>
-                    <ul className="exercise-list">
-                        <li><strong>Deducción de vistas:</strong> Dado un isométrico simple de 10x10, dibujar las 3 vistas ortogonales principales (Escala 1:1).</li>
-                        <li><strong>Correspondencia:</strong> Identificar qué vista corresponde a qué cara señalada en el sólido.</li>
-                        <li><strong>Aristas Ocultas:</strong> Aplicar línea Tipo E en vistas donde hay huecos no visibles.</li>
-                    </ul>
+                    <h2>Cortes y Secciones Gráficas</h2>
+                    <p>Cuando el objeto tiene huecos interiores, lo "cortamos" virtualmente para ver su estructura.</p>
+                    <div className="cut-demo">
+                        <svg viewBox="0 0 100 40" width="200" style={{ marginTop: '1rem' }}>
+                            <rect x="10" y="5" width="80" height="30" fill="none" stroke="#fff" />
+                            <line x1="50" y1="0" x2="50" y2="40" stroke="var(--primary-color)" strokeWidth="1" strokeDasharray="5,2" />
+                            <text x="52" y="10" fill="var(--primary-color)" fontSize="5">A-A</text>
+                            <path d="M10 5 L90 5 L90 35 L10 35 Z" fill="url(#diagonal-stripe)" />
+                        </svg>
+                        <p className="small-text">El rayado a 45° indica la superficie material cortada (IRAM 4502).</p>
+                    </div>
                 </section>
 
                 <section className="drawing-card">
-                    <h2>Ejercicios 2° Año</h2>
-                    <ul className="exercise-list">
-                        <li><strong>Corte Longitudinal:</strong> Representar una pieza mecánica hueca realizando un corte A-A por su eje de simetría.</li>
-                        <li><strong>Acotación en Vistas:</strong> Acotar un conjunto de 3 vistas siguiendo estrictamente la Norma IRAM 4513.</li>
-                        <li><strong>Simetría:</strong> Utilizar el símbolo de simetría en piezas circulares para omitir vistas redundantes.</li>
-                    </ul>
+                    <h2>Acotación Progresiva</h2>
+                    <p>En el plano, las cotas deben seguir el orden de fabricación: Medidas de posición y luego de tamaño.</p>
                 </section>
             </div>
 
             <style>{`
-                .vistas-order { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 1rem; }
-                .vistas-row { display: flex; gap: 10px; }
-                .vista-box { padding: 10px 20px; border: 1px dashed var(--primary-color); background: rgba(0,242,255,0.05); font-size: 0.8rem; border-radius: 4px; }
-                .vista-box.side { border-color: var(--secondary-color); }
-                .symbol-comparison { display: flex; justify-content: space-around; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 12px; }
-                .symbol-item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 0.8rem; }
-                .cortes-info ul { column-count: 2; margin-top: 1rem; }
-                @media (max-width: 600px) { .cortes-info ul { column-count: 1; } }
+                .vistas-graph { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+                .vistas-main-grid { display: grid; grid-template-areas: ". superior ." "izq centro der" ". planta ."; gap: 10px; text-align: center; }
+                .vista-graph-item { padding: 1.5rem; border: 2px solid var(--primary-color); background: rgba(0, 242, 255, 0.05); border-radius: 8px; font-weight: bold; font-size: 0.8rem; height: 100px; display: flex; align-items: center; justify-content: center; }
+                .vista-graph-item.center { grid-area: centro; border-color: #fff; }
+                .vista-graph-item.bottom { grid-area: planta; }
+                .vista-graph-item.right { grid-area: der; }
+                .vista-label { font-size: 0.7rem; color: var(--text-dim); }
+                .cut-demo { background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; text-align: center; }
+                @media (max-width: 800px) { .vistas-graph { grid-template-columns: 1fr; } }
             `}</style>
         </div>
     );
