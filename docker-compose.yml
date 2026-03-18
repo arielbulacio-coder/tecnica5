@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  tecnica5:
+    container_name: tecnica5_app
+    build: .
+    networks:
+      - web
+    restart: always
+
+networks:
+  web:
+    external: true

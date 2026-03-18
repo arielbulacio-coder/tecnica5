@@ -1,0 +1,101 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+
+const AcademicOverview = () => {
+    const { user } = useAuth();
+
+    // Define modules based on role (simplified for now, all show but might be restricted inside)
+    const modules = [
+        {
+            title: 'Boletín de Calificaciones',
+            path: '/calificaciones',
+            icon: '📊',
+            desc: 'Cargar notas ver promedios por trimestre.',
+            roles: ['admin', 'profesor', 'director', 'secretario', 'alumno', 'padre']
+        },
+        {
+            title: 'Control de Asistencia',
+            path: '/asistencia',
+            icon: '📅',
+            desc: 'Registro diario de presentes y ausentes.',
+            roles: ['admin', 'preceptor', 'jefe_preceptores', 'director', 'alumno', 'padre']
+        },
+        {
+            title: 'Gestión de Estudiantes',
+            path: '/estudiantes',
+            icon: '👨‍🎓',
+            desc: 'Alta, baja y modificación de alumnos.',
+            roles: ['admin', 'director', 'secretario', 'jefe_preceptores']
+        },
+        {
+            title: 'Usuarios del Sistema',
+            path: '/usuarios',
+            icon: '🔐',
+            desc: 'Administrar permisos y cuentas de acceso.',
+            roles: ['admin']
+        },
+        {
+            title: 'Aula Virtual',
+            path: '/aula-virtual',
+            icon: '💻',
+            desc: 'Material de estudio y actividades.',
+            roles: ['admin', 'profesor', 'alumno', 'padre']
+        },
+        {
+            title: 'Asignación Docente',
+            path: '/asignacion-docente',
+            icon: '👨‍🏫',
+            desc: 'Asignar materias y cursos a profesores.',
+            roles: ['admin', 'director', 'secretario']
+        },
+        {
+            title: 'Alta de Docentes',
+            path: '/alta-docente',
+            icon: '📝',
+            desc: 'Registrar nuevos profesores en el sistema.',
+            roles: ['admin', 'director', 'secretario']
+        },
+        {
+            title: 'Comunicaciones',
+            path: '/comunicados',
+            icon: '📢',
+            desc: 'Avisos, mensajes y llamados de atención.',
+            roles: ['admin', 'director', 'secretario', 'jefe_preceptores', 'preceptor', 'alumno', 'padre']
+        },
+        {
+            title: 'Libro de Temas',
+            path: '/libro-temas',
+            icon: '📖',
+            desc: 'Registro de clases, temas y actividades dictadas.',
+            roles: ['admin', 'director', 'secretario', 'profesor', 'preceptor']
+        }
+    ];
+
+    const allowedModules = modules.filter(m => m.roles.includes(user?.role));
+
+    return (
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+            <div className="text-center mb-5">
+                <h1 className="display-4 text-gradient">Panel de Gestión Académica</h1>
+                <p className="lead" style={{ color: 'var(--text-secondary)' }}>
+                    Bienvenido, <strong>{user?.email}</strong>
+                </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                {allowedModules.map((mod, index) => (
+                    <Link to={mod.path} key={index} style={{ textDecoration: 'none' }}>
+                        <div className="glass-card hover-scale" style={{ padding: '2rem', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', transition: 'transform 0.3s ease' }}>
+                            <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>{mod.icon}</div>
+                            <h3 style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>{mod.title}</h3>
+                            <p style={{ color: 'var(--text-secondary)' }}>{mod.desc}</p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default AcademicOverview;
