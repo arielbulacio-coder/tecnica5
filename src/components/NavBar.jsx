@@ -96,66 +96,80 @@ const NavBar = () => {
                     Inicio
                 </Link>
 
-                {/* Simuladores Didácticos - Público */}
-                <div className={`dropdown ${openSubmenu === 'didactic' ? 'active' : ''}`}>
-                    <div
-                        className="dropdown-trigger"
-                        style={linkStyle}
-                        onClick={() => toggleSubmenu('didactic')}
-                    >
-                        Simuladores <span className="arrow">▼</span>
+                {/* ELECTRICIDAD */}
+                <div className={`dropdown ${openSubmenu === 'electricidad' ? 'active' : ''}`}>
+                    <div className="dropdown-trigger" style={linkStyle} onClick={() => toggleSubmenu('electricidad')}>
+                        ⚡ Electricidad <span className="arrow">▼</span>
                     </div>
-                    <div className="dropdown-menu" style={{ maxHeight: '70vh', overflowY: 'auto', minWidth: '250px' }}>
-                        {/* Electrónica */}
-                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Electrónica</div>
+                    <div className="dropdown-menu" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                         <Link to="/ley-ohm" style={linkStyle} onClick={closeAll}>Ley de Ohm</Link>
-                        <Link to="/codigos-resistencias" style={linkStyle} onClick={closeAll}>Códigos</Link>
-                        <Link to="/resistencias-serie-paralelo" style={linkStyle} onClick={closeAll}>Serie/Paralelo</Link>
-                        <Link to="/kirchhoff" style={linkStyle} onClick={closeAll}>Kirchhoff</Link>
-                        <Link to="/teorema-thevenin" style={linkStyle} onClick={closeAll}>Thévenin</Link>
-                        <Link to="/teorema-norton" style={linkStyle} onClick={closeAll}>Norton</Link>
-                        <Link to="/potencia" style={linkStyle} onClick={closeAll}>Potencia</Link>
-
-                        {/* Matemática */}
-                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Matemática</div>
-                        <Link to="/conversion-unidades" style={linkStyle} onClick={closeAll}>Conversión</Link>
-                        <Link to="/pitagoras" style={linkStyle} onClick={closeAll}>Pitágoras</Link>
-                        <Link to="/trigonometria" style={linkStyle} onClick={closeAll}>Trigonometría</Link>
-
-                        {/* Física */}
-                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Física</div>
-                        <Link to="/cinematica" style={linkStyle} onClick={closeAll}>Cinemática</Link>
+                        <Link to="/kirchhoff" style={linkStyle} onClick={closeAll}>Leyes de Kirchhoff</Link>
+                        <Link to="/potencia" style={linkStyle} onClick={closeAll}>Potencia Eléctrica</Link>
                         <Link to="/electricidad-basica" style={linkStyle} onClick={closeAll}>Electricidad Básica</Link>
+                        <Link to="/circuitos-domiciliarios" style={linkStyle} onClick={closeAll}>Instal. Domiciliarias</Link>
+                        <Link to="/herramientas-electricidad" style={linkStyle} onClick={closeAll}>Herramientas</Link>
+                    </div>
+                </div>
 
-                        {/* Taller */}
-                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Taller</div>
-                        <Link to="/circuitos-domiciliarios" style={linkStyle} onClick={closeAll}>Instal. Eléctricas</Link>
-                        <Link to="/micrometro" style={linkStyle} onClick={closeAll}>Micrómetro</Link>
-                        <Link to="/calibre" style={linkStyle} onClick={closeAll}>Calibre</Link>
-                        <Link to="/metro-carpintero" style={linkStyle} onClick={closeAll}>Metro Carpintero</Link>
-                        <Link to="/seguridad-epp" style={linkStyle} onClick={closeAll}>Seguridad (EPP)</Link>
-                        <Link to="/herramientas-carpinteria" style={linkStyle} onClick={closeAll}>Carpintería</Link>
-                        <Link to="/metal-mecanica" style={linkStyle} onClick={closeAll}>Metal-Mecánica</Link>
-                        <Link to="/herramientas-electricidad" style={linkStyle} onClick={closeAll}>Electricidad</Link>
-                        <Link to="/herramientas-electronica" style={linkStyle} onClick={closeAll}>Electrónica</Link>
+                {/* ELECTRÓNICA */}
+                <div className={`dropdown ${openSubmenu === 'electronica' ? 'active' : ''}`}>
+                    <div className="dropdown-trigger" style={linkStyle} onClick={() => toggleSubmenu('electronica')}>
+                        🔌 Electrónica <span className="arrow">▼</span>
+                    </div>
+                    <div className="dropdown-menu" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+                        <Link to="/codigos-resistencias" style={linkStyle} onClick={closeAll}>Códigos de Resistencias</Link>
+                        <Link to="/resistencias-serie-paralelo" style={linkStyle} onClick={closeAll}>Serie / Paralelo</Link>
+                        <Link to="/teorema-thevenin" style={linkStyle} onClick={closeAll}>T. de Thévenin</Link>
+                        <Link to="/teorema-norton" style={linkStyle} onClick={closeAll}>T. de Norton</Link>
+                        <Link to="/componentes-electronica" style={linkStyle} onClick={closeAll}>Componentes y Lógica</Link>
+                        <Link to="/energias-renovables" style={linkStyle} onClick={closeAll}>Energías Renovables</Link>
                         <Link to="/osciloscopio" style={linkStyle} onClick={closeAll}>Osciloscopio</Link>
                         <Link to="/multimetro" style={linkStyle} onClick={closeAll}>Multímetros</Link>
+                        <Link to="/herramientas-electronica" style={linkStyle} onClick={closeAll}>Herramientas</Link>
 
-                        {/* Dibujo Técnico */}
+                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Arduino</div>
+                        <Link to="/arduino-intro" style={linkStyle} onClick={closeAll}>Introducción</Link>
+                        <Link to="/cpp-basico" style={linkStyle} onClick={closeAll}>C/C++ Básico</Link>
+                        <Link to="/pwm" style={linkStyle} onClick={closeAll}>Señales PWM</Link>
+                        <Link to="/sensores" style={linkStyle} onClick={closeAll}>Sensores</Link>
+                        <Link to="/comunicacion-serial" style={linkStyle} onClick={closeAll}>Configuración Serial</Link>
+                        <Link to="/scratch" style={linkStyle} onClick={closeAll}>Programación Scratch 😺</Link>
+                        <Link to="/robot-evita-obstaculos" style={linkStyle} onClick={closeAll}>Proyecto: Robot Evasor</Link>
+                    </div>
+                </div>
+
+                {/* CIENCIAS Y DIBUJO */}
+                <div className={`dropdown ${openSubmenu === 'ciencias' ? 'active' : ''}`}>
+                    <div className="dropdown-trigger" style={linkStyle} onClick={() => toggleSubmenu('ciencias')}>
+                        📐 Básicas <span className="arrow">▼</span>
+                    </div>
+                    <div className="dropdown-menu" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Matemática y Física</div>
+                        <Link to="/conversion-unidades" style={linkStyle} onClick={closeAll}>Conversión Unidades</Link>
+                        <Link to="/pitagoras" style={linkStyle} onClick={closeAll}>Teorema Pitágoras</Link>
+                        <Link to="/trigonometria" style={linkStyle} onClick={closeAll}>Trigonometría</Link>
+                        <Link to="/cinematica" style={linkStyle} onClick={closeAll}>Cinemática (MRU/MRUV)</Link>
+
                         <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Dibujo Técnico</div>
                         <Link to="/dibujo-tecnico/normas-iram" style={linkStyle} onClick={closeAll}>Normas IRAM</Link>
                         <Link to="/dibujo-tecnico/proyecciones" style={linkStyle} onClick={closeAll}>Método Monge</Link>
                         <Link to="/dibujo-tecnico/axonometrica" style={linkStyle} onClick={closeAll}>Axonometrías</Link>
                         <Link to="/dibujo-tecnico/construcciones-geometricas" style={linkStyle} onClick={closeAll}>Construcciones</Link>
+                    </div>
+                </div>
 
-                        {/* Arduino */}
-                        <div style={{ padding: '0.5rem 1rem', fontWeight: 'bold', color: 'var(--primary-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', marginTop: '0.5rem' }}>Arduino</div>
-                        <Link to="/arduino-intro" style={linkStyle} onClick={closeAll}>Introducción</Link>
-                        <Link to="/cpp-basico" style={linkStyle} onClick={closeAll}>C/C++ Básico</Link>
-                        <Link to="/pwm" style={linkStyle} onClick={closeAll}>PWM</Link>
-                        <Link to="/sensores" style={linkStyle} onClick={closeAll}>Sensores</Link>
-                        <Link to="/comunicacion-serial" style={linkStyle} onClick={closeAll}>Serial</Link>
-                        <Link to="/scratch" style={linkStyle} onClick={closeAll}>Programación Scratch 😺</Link>
+                {/* TALLER */}
+                <div className={`dropdown ${openSubmenu === 'taller' ? 'active' : ''}`}>
+                    <div className="dropdown-trigger" style={linkStyle} onClick={() => toggleSubmenu('taller')}>
+                        🛠️ Taller <span className="arrow">▼</span>
+                    </div>
+                    <div className="dropdown-menu" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+                        <Link to="/seguridad-epp" style={linkStyle} onClick={closeAll}>Seguridad y EPP</Link>
+                        <Link to="/micrometro" style={linkStyle} onClick={closeAll}>Micrómetro</Link>
+                        <Link to="/calibre" style={linkStyle} onClick={closeAll}>Calibre Pie de Rey</Link>
+                        <Link to="/metro-carpintero" style={linkStyle} onClick={closeAll}>Metro de Carpintero</Link>
+                        <Link to="/herramientas-carpinteria" style={linkStyle} onClick={closeAll}>Carpintería</Link>
+                        <Link to="/metal-mecanica" style={linkStyle} onClick={closeAll}>Metal-Mecánica</Link>
                     </div>
                 </div>
 

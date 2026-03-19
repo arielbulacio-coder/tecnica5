@@ -151,62 +151,65 @@ const Home = () => {
 
             {isAuthenticated && (
                 <>
-                    <h2 style={{ marginBottom: '2rem' }}>MÃ³dulos Educativos</h2>
+                    <h2 style={{ marginBottom: '2rem' }}>Módulos Educativos</h2>
 
-                    {/* Leyes Fundamentales */}
+                    {/* ⚡ ELECTRICIDAD */}
                     <div style={{ maxWidth: '1200px', margin: '0 auto 3rem auto' }}>
-                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>âš¡ Leyes Fundamentales</h3>
+                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>⚡ Electricidad</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                             <Link to="/ley-ohm" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                     <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Ley de Ohm</h3>
-                                    <p>Calculadora y TeorÃ­a Fundamental</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>Î©</div>
+                                    <p>Calculadora y Teoría Fundamental</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>Ω</div>
                                 </div>
                             </Link>
-
                             <Link to="/kirchhoff" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                     <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Leyes de Kirchhoff</h3>
-                                    <p>AnÃ¡lisis de Mallas y Nodos</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>âˆ‘</div>
+                                    <p>Análisis de Mallas y Nodos</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>∑</div>
                                 </div>
                             </Link>
-
-                            <Link to="/teorema-thevenin" style={{ textDecoration: 'none' }}>
-                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Teorema de ThÃ©venin</h3>
-                                    <p>Circuitos Equivalentes</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>âš™ï¸</div>
-                                </div>
-                            </Link>
-
-                            <Link to="/teorema-norton" style={{ textDecoration: 'none' }}>
-                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Teorema de Norton</h3>
-                                    <p>Fuentes de Corriente Equivalentes</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>ðŸ”Œ</div>
-                                </div>
-                            </Link>
-
                             <Link to="/potencia" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Potencia ElÃ©ctrica</h3>
-                                    <p>Ley de Watt y DisipaciÃ³n</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>âš¡</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Potencia Eléctrica</h3>
+                                    <p>Ley de Watt y Disipación</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>⚡</div>
+                                </div>
+                            </Link>
+                            <Link to="/electricidad-basica" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Electricidad Básica</h3>
+                                    <p>Teoría General y Magnitudes</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>💡</div>
+                                </div>
+                            </Link>
+                            <Link to="/circuitos-domiciliarios" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Instal. Eléctricas</h3>
+                                    <p>Simulador Interactivo de Conexiones</p>
+                                    <div style={{ marginTop: '1rem', color: '#eab308', fontSize: '3rem' }}>⚡</div>
+                                </div>
+                            </Link>
+                            <Link to="/herramientas-electricidad" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Herramientas</h3>
+                                    <p>Herramientas de Electricidad</p>
+                                    <div style={{ marginTop: '1rem', color: '#eab308', fontSize: '3rem' }}>🛠️</div>
                                 </div>
                             </Link>
                         </div>
                     </div>
 
-                    {/* Resistencias */}
-                    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                        <h3 style={{ textAlign: 'left', color: 'var(--secondary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>ðŸ”§ Resistencias</h3>
+                    {/* 🔌 ELECTRÓNICA */}
+                    <div style={{ maxWidth: '1200px', margin: '3rem auto 0 auto' }}>
+                        <h3 style={{ textAlign: 'left', color: 'var(--secondary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>🔌 Electrónica</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                             <Link to="/codigos-resistencias" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>CÃ³digos de Color</h3>
-                                    <p>IdentificaciÃ³n de Valores</p>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Códigos de Color</h3>
+                                    <p>Identificación de Resistencias</p>
                                     <div style={{ marginTop: '1rem', display: 'flex', gap: '5px' }}>
                                         <div style={{ width: '20px', height: '10px', backgroundColor: 'red' }}></div>
                                         <div style={{ width: '20px', height: '10px', backgroundColor: 'purple' }}></div>
@@ -214,71 +217,118 @@ const Home = () => {
                                     </div>
                                 </div>
                             </Link>
-
                             <Link to="/resistencias-serie-paralelo" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Serie y Paralelo</h3>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Serie / Paralelo</h3>
                                     <p>Resistencias Equivalentes</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>âš¡</div>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>📏</div>
+                                </div>
+                            </Link>
+                            <Link to="/teorema-thevenin" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>T. de Thévenin</h3>
+                                    <p>Circuitos Equivalentes</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>⚙️</div>
+                                </div>
+                            </Link>
+                            <Link to="/teorema-norton" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>T. de Norton</h3>
+                                    <p>Fuentes Equivalentes</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>🔌</div>
+                                </div>
+                            </Link>
+                            <Link to="/componentes-electronica" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Componentes y Lógica</h3>
+                                    <p>Simulador Interactivo de Componentes</p>
+                                    <div style={{ marginTop: '1rem', color: '#4caf50', fontSize: '2rem' }}>🔌</div>
+                                </div>
+                            </Link>
+                            <Link to="/energias-renovables" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Energías Renovables</h3>
+                                    <p>Paneles y Baterías Solares</p>
+                                    <div style={{ marginTop: '1rem', color: '#ffc107', fontSize: '2rem' }}>☀️</div>
+                                </div>
+                            </Link>
+                            <Link to="/osciloscopio" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Osciloscopio</h3>
+                                    <p>Simulador Dinámico</p>
+                                    <img src={imgOscilloscope} alt="Osciloscopio" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                </div>
+                            </Link>
+                            <Link to="/multimetro" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Multímetros</h3>
+                                    <p>Tester Digital y Analógico</p>
+                                    <img src={imgMultimeter} alt="Multímetro" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                </div>
+                            </Link>
+                            <Link to="/herramientas-electronica" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Herramientas</h3>
+                                    <p>Soldador y Accesorios</p>
+                                    <img src={imgSoldering} alt="Electrónica" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
                                 </div>
                             </Link>
                         </div>
                     </div>
 
-                    {/* Herramientas */}
+                    {/* 📐 MATEMÁTICA Y FÍSICA */}
                     <div style={{ maxWidth: '1200px', margin: '3rem auto 0 auto' }}>
-                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>ðŸ“ Herramientas de Medida</h3>
+                        <h3 style={{ textAlign: 'left', color: 'var(--text-main)', marginBottom: '1rem', paddingLeft: '1rem' }}>📐 Ciencias Básicas</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                             <Link to="/conversion-unidades" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                     <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Conversor de Unidades</h3>
-                                    <p>Imperial a MÃ©trico y Viceversa</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>ðŸ“</div>
+                                    <p>Imperial a Métrico y Viceversa</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>📏</div>
                                 </div>
                             </Link>
-
                             <Link to="/pitagoras" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>PitÃ¡goras</h3>
-                                    <p>Teorema y CÃ¡lculos de TriÃ¡ngulos</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>ðŸ“</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Pitágoras</h3>
+                                    <p>Cálculo de Triángulos y Fuerzas</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>📐</div>
                                 </div>
                             </Link>
-
                             <Link to="/trigonometria" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>TrigonometrÃ­a</h3>
-                                    <p>Funciones Seno, Coseno y Tangente</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>ðŸ“</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Trigonometría</h3>
+                                    <p>Seno, Coseno y Tangente</p>
+                                    <div style={{ marginTop: '1rem', color: 'var(--primary-color)', fontSize: '2rem' }}>📐</div>
                                 </div>
                             </Link>
-                        </div>
-                    </div>
-                    {/* FÃ­sica */}
-                    <div style={{ maxWidth: '1200px', margin: '3rem auto 0 auto' }}>
-                        <h3 style={{ textAlign: 'left', color: 'var(--secondary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>ðŸš€ Ciencias FÃ­sicas</h3>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                             <Link to="/cinematica" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>CinemÃ¡tica</h3>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Cinemática</h3>
                                     <p>Movimiento MRU y MRUV</p>
-                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>ðŸŽï¸</div>
+                                    <div style={{ marginTop: '1rem', color: 'var(--secondary-color)', fontSize: '2rem' }}>🏎️</div>
                                 </div>
                             </Link>
                         </div>
                     </div>
-                    {/* Taller */}
+
+                    {/* 🛠️ TALLER */}
                     <div style={{ maxWidth: '1200px', margin: '3rem auto 0 auto' }}>
-                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>âš’ï¸ Taller y Herramientas</h3>
+                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>🛠️ Taller y Mediciones</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                            <Link to="/micrometro" style={{ textDecoration: 'none' }}>
+                            <Link to="/seguridad-epp" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>MicrÃ³metro</h3>
-                                    <p>Simulador de MediciÃ³n de PrecisiÃ³n</p>
-                                    <img src={imgMicrometer} alt="MicrÃ³metro" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Seguridad y EPP</h3>
+                                    <p>Elementos de Protección Personal</p>
+                                    <div style={{ marginTop: '1rem', color: '#ef4444', fontSize: '3rem' }}>🛡️</div>
                                 </div>
                             </Link>
-
+                            <Link to="/micrometro" style={{ textDecoration: 'none' }}>
+                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Micrómetro</h3>
+                                    <p>Simulador de Medición de Precisión</p>
+                                    <img src={imgMicrometer} alt="Micrómetro" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                </div>
+                            </Link>
                             <Link to="/calibre" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                     <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Calibre</h3>
@@ -286,7 +336,6 @@ const Home = () => {
                                     <img src={imgCaliper} alt="Calibre" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
                                 </div>
                             </Link>
-
                             <Link to="/metro-carpintero" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                     <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Metro</h3>
@@ -294,60 +343,45 @@ const Home = () => {
                                     <img src={`${import.meta.env.BASE_URL}assets/ruler_v2.png`} alt="Metro Carpintero" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
                                 </div>
                             </Link>
-
-                            <Link to="/seguridad-epp" style={{ textDecoration: 'none' }}>
-                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Seguridad</h3>
-                                    <p>Elementos de ProtecciÃ³n (EPP)</p>
-                                    <div style={{ marginTop: '1rem', color: '#ef4444', fontSize: '3rem' }}>ðŸ›¡ï¸</div>
-                                </div>
-                            </Link>
-
                             <Link to="/herramientas-carpinteria" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>CarpinterÃ­a</h3>
-                                    <p>Manuales de Madera</p>
-                                    <img src={`${import.meta.env.BASE_URL}assets/saw_v2.png`} alt="CarpinterÃ­a" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Carpintería</h3>
+                                    <p>Maderas y Herramientas</p>
+                                    <img src={`${import.meta.env.BASE_URL}assets/saw_v2.png`} alt="Carpintería" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
                                 </div>
                             </Link>
-
                             <Link to="/metal-mecanica" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>MecÃ¡nica</h3>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Mecánica</h3>
                                     <p>Metal y Ajuste</p>
-                                    <div style={{ marginTop: '1rem', color: '#3b82f6', fontSize: '3rem' }}>ðŸ”©</div>
+                                    <div style={{ marginTop: '1rem', color: '#3b82f6', fontSize: '3rem' }}>🔩</div>
                                 </div>
                             </Link>
-
-                            <Link to="/herramientas-electricidad" style={{ textDecoration: 'none' }}>
+                        </div>
+                    </div>
+                    {/* 🚀 ARDUINO Y PROGRAMACIÓN */}
+                    <div style={{ maxWidth: '1200px', margin: '3rem auto 0 auto' }}>
+                        <h3 style={{ textAlign: 'left', color: 'var(--primary-color)', marginBottom: '1rem', paddingLeft: '1rem' }}>🚀 Arduino y Programación</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                            <Link to="/robot-evita-obstaculos" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Electricidad</h3>
-                                    <p>Instalaciones ElÃ©ctricas</p>
-                                    <div style={{ marginTop: '1rem', color: '#eab308', fontSize: '3rem' }}>âš¡</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Proyecto: Robot Evasor</h3>
+                                    <p>Simulación Sensor y Motores</p>
+                                    <div style={{ marginTop: '1rem', color: '#00ccff', fontSize: '3rem' }}>🤖</div>
                                 </div>
                             </Link>
-
-                            <Link to="/herramientas-electronica" style={{ textDecoration: 'none' }}>
+                            <Link to="/scratch" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>ElectrÃ³nica</h3>
-                                    <p>Laboratorio y Circuitos</p>
-                                    <img src={imgSoldering} alt="ElectrÃ³nica" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Programación Scratch</h3>
+                                    <p>Bloques Lógicos</p>
+                                    <div style={{ marginTop: '1rem', color: '#ffcc00', fontSize: '3rem' }}>😺</div>
                                 </div>
                             </Link>
-
-                            <Link to="/osciloscopio" style={{ textDecoration: 'none' }}>
+                            <Link to="/sensores" style={{ textDecoration: 'none' }}>
                                 <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Osciloscopio</h3>
-                                    <p>Simulador DinÃ¡mico</p>
-                                    <img src={imgOscilloscope} alt="Osciloscopio" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
-                                </div>
-                            </Link>
-
-                            <Link to="/multimetro" style={{ textDecoration: 'none' }}>
-                                <div className="glass-card" style={{ margin: 0, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>MultÃ­metros</h3>
-                                    <p>Tester Digital y AnalÃ³gico</p>
-                                    <img src={imgMultimeter} alt="MultÃ­metro" style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }} />
+                                    <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Sensores</h3>
+                                    <p>Analógicos y Digitales</p>
+                                    <div style={{ marginTop: '1rem', color: '#00ccff', fontSize: '3rem' }}>📡</div>
                                 </div>
                             </Link>
                         </div>

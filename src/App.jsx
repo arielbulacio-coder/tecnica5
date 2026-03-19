@@ -27,6 +27,8 @@ import OscilloscopePage from './pages/OscilloscopePage';
 import MultimeterPage from './pages/MultimeterPage';
 import DomesticCircuitsPage from './pages/DomesticCircuitsPage';
 import ElectricityBasicsPage from './pages/ElectricityBasicsPage';
+import ElectronicComponentsPage from './pages/ElectronicComponentsPage';
+import RenewableEnergyPage from './pages/RenewableEnergyPage';
 
 // Dibujo Técnico
 import NormasIRAMPage from './pages/drawing/NormasIRAMPage';
@@ -41,6 +43,7 @@ import PWMPage from './pages/PWMPage';
 import SensorsPage from './pages/SensorsPage';
 import SerialPage from './pages/SerialPage';
 import ScratchPage from './pages/ScratchPage';
+import RobotEvitaObstaculosPage from './pages/RobotEvitaObstaculosPage';
 
 // Gestión Académica
 import AcademicOverviewPage from './pages/AcademicOverviewPage';
@@ -99,6 +102,8 @@ function App() {
             <Route path="/metal-mecanica" element={<MetalMecanicaPage />} />
             <Route path="/herramientas-electricidad" element={<ElectricalToolsPage />} />
             <Route path="/herramientas-electronica" element={<ElectronicsToolsPage />} />
+            <Route path="/componentes-electronica" element={<ElectronicComponentsPage />} />
+            <Route path="/energias-renovables" element={<RenewableEnergyPage />} />
             <Route path="/osciloscopio" element={<OscilloscopePage />} />
             <Route path="/multimetro" element={<MultimeterPage />} />
             <Route path="/circuitos-domiciliarios" element={<DomesticCircuitsPage />} />
@@ -116,6 +121,7 @@ function App() {
             <Route path="/sensores" element={<SensorsPage />} />
             <Route path="/comunicacion-serial" element={<SerialPage />} />
             <Route path="/scratch" element={<ScratchPage />} />
+            <Route path="/robot-evita-obstaculos" element={<RobotEvitaObstaculosPage />} />
 
             {/* Rutas Protegidas - Gestión Académica */}
             <Route element={<ProtectedRoute />}>
