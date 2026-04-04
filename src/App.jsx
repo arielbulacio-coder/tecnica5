@@ -44,6 +44,7 @@ import SensorsPage from './pages/SensorsPage';
 import SerialPage from './pages/SerialPage';
 import ScratchPage from './pages/ScratchPage';
 import RobotEvitaObstaculosPage from './pages/RobotEvitaObstaculosPage';
+import ProyectosReciclablesPage from './pages/ProyectosReciclablesPage';
 
 // Gestión Académica
 import AcademicOverviewPage from './pages/AcademicOverviewPage';
@@ -122,6 +123,7 @@ function App() {
             <Route path="/comunicacion-serial" element={<SerialPage />} />
             <Route path="/scratch" element={<ScratchPage />} />
             <Route path="/robot-evita-obstaculos" element={<RobotEvitaObstaculosPage />} />
+            <Route path="/proyectos-reciclables" element={<ProyectosReciclablesPage />} />
 
             {/* Rutas Protegidas - Gestión Académica */}
             <Route element={<ProtectedRoute />}>

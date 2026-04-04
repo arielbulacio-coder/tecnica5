@@ -145,7 +145,7 @@ const Home = () => {
                 </p>
 
                 <div style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-dim)' }}>
-                    <p><a href="https://maps.app.goo.gl/fRkYSy4dkfSBhfwU9" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>📍 Ver ubicación en Google Maps</a></p>
+                    <p><a href="https://maps.google.com/?q=-34.501659,-58.812553" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>📍 Ver ubicación en Google Maps</a></p>
                 </div>
             </div>
 

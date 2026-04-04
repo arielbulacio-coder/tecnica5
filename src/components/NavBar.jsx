@@ -132,6 +132,7 @@ const NavBar = () => {
                         <Link to="/comunicacion-serial" style={linkStyle} onClick={closeAll}>Configuración Serial</Link>
                         <Link to="/scratch" style={linkStyle} onClick={closeAll}>Programación Scratch 😺</Link>
                         <Link to="/robot-evita-obstaculos" style={linkStyle} onClick={closeAll}>Proyecto: Robot Evasor</Link>
+                        <Link to="/proyectos-reciclables" style={{...linkStyle, color: 'var(--primary-color)', fontWeight: 'bold'}} onClick={closeAll}>🚀 Proyectos Reciclables</Link>
                     </div>
                 </div>
 
@@ -170,10 +171,20 @@ const NavBar = () => {
                     </div>
                 </div>
 
-                {/* Material Didactico - Publico */}
-                <a href="https://drive.google.com/drive/folders/1-AR-bhwYmRbdB0T03FTiBMLSJc4iTxUV?usp=drive_link" target="_blank" rel="noopener noreferrer" style={linkStyle} onClick={closeAll}>
-                    {"Material Did\u00e1ctico"}
-                </a>
+                {/* Material Didáctico - Dropdown con accesos diferenciados */}
+                <div className={`dropdown ${openSubmenu === 'material' ? 'active' : ''}`}>
+                    <div className="dropdown-trigger" style={linkStyle} onClick={() => toggleSubmenu('material')}>
+                        📚 Material Didáctico <span className="arrow">▼</span>
+                    </div>
+                    <div className="dropdown-menu">
+                        <a href="https://drive.google.com/drive/folders/1HM-UAReVktvV87skwVpYyq0g96SH33hP" target="_blank" rel="noopener noreferrer" style={linkStyle} onClick={closeAll}>
+                            📖 Estudiantes
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1-AR-bhwYmRbdB0T03FTiBMLSJc4iTxUV" target="_blank" rel="noopener noreferrer" style={linkStyle} onClick={closeAll}>
+                            👩‍🏫 Docentes (ABC)
+                        </a>
+                    </div>
+                </div>
 
                 {/* Submenu Gestión Académica - Solo si está autenticado */}
                 {isAuthenticated && (

@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
       manifest: {
-        name: 'eest nro 5 José C. Paz',
-        short_name: 'eest nro 5 José C. Paz',
-        description: 'Plataforma educativa técnica y simuladores didácticos.',
+        name: 'EEST Nro 5 v1.0.3',
+        short_name: 'EEST Nro 5 v1.0.3',
+        description: 'Plataforma educativa técnica EEST Nro 5 José C. Paz.',
         theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
